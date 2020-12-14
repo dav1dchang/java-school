@@ -19,8 +19,16 @@ public class SchoolsApplication
      */
     public static void main(String[] args)
     {
-        SpringApplication.run(SchoolsApplication.class,
-            args);
+        try
+        {
+            System.out.println(System.getenv("PATH").toUpperCase());
+        } catch (Exception e)
+        {
+            System.out.println("No Such Environment Variable");
+        } finally
+        {
+            SpringApplication.run(SchoolsApplication.class,
+                    args);
+        }
     }
-
 }
