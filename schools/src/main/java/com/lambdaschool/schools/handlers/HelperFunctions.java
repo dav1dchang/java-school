@@ -3,10 +3,11 @@ package com.lambdaschool.schools.handlers;
 import com.lambdaschool.schools.models.ValidationError;
 import org.springframework.boot.context.properties.bind.validation.ValidationErrors;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
 import javax.validation.ConstraintViolation;
-import javax.validation.ConstraintViolationException;
+import org.hibernate.exception.ConstraintViolationException;
 import java.util.ArrayList;
 import java.util.List;
 
